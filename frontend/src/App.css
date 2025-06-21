@@ -1,0 +1,145 @@
+:root {
+  --primary-pink: #FFE5E5;
+  --secondary-pink: #FFD1D1;
+  --accent-brown: #8B4513;
+  --cloud-white: #FFFFFF;
+}
+
+body {
+  background-color: var(--primary-pink);
+  font-family: 'Courier Prime', 'Courier New', 'Courier', monospace;
+}
+
+.App {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--cloud-white);
+  border-radius: 5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+
+h1 {
+  color: var(--accent-brown);
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+select {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: 3px solid var(--secondary-pink);
+  border-radius: 20px;
+  margin-left: 1rem;
+  background-color: var(--cloud-white);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+select:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+  width: 95%;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border: 3px solid var(--secondary-pink);
+  border-radius: 20px;
+  font-size: 1.1rem;
+  resize: vertical;
+  min-height: 150px;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  background-color: #FFFFFF;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: var(--accent-brown);
+  box-shadow: 0 0 10px rgba(139, 69, 19, 0.2);
+}
+
+button {
+  background-color: var(--secondary-pink);
+  color: var(--accent-brown);
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  font-weight: bold;
+  display: block;
+  margin: 1rem auto;
+  position: relative;
+}
+
+button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.translation-container {
+  margin-top: 0.5rem;
+  padding: 1rem;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  border-color: var(--secondary-pink);
+  border-style: solid;
+  border-width: 3px;
+}
+
+.translation-item {
+  padding: 0.3rem;
+}
+
+.translation-item p {
+  margin: 0.8rem 0;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.userSelection {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.original-text {
+  color: var(--accent-brown);
+  font-weight: bold;
+}
+
+.transliterated-text {
+  color: #9B6B56;
+  font-style: italic;
+  font-weight: 550;
+}
+
+.translated-text {
+  color: #6B4423;
+  font-weight: 550;
+}
+
+/* Cute label styling */
+label {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--secondary-pink);
+  border-radius: 15px;
+  color: var(--accent-brown);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}

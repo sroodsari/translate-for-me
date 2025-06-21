@@ -1,0 +1,9 @@
+pypinyin
+PersianG2p
+deep_translator
+epitran
+fastapi
+googletrans==3.1.0a0
+uvicorn
+pydantic
+typing-extensions
