@@ -12,7 +12,7 @@ function App() {
     try {
       const lines = text.split('\n');
 
-      const response = await axios.post('http://localhost:8000/translate', {
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/translate`, {
         lines,
         from_lang: language,
         to_lang: 'en',
