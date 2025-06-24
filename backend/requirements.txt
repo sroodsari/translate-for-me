@@ -1,3 +1,4 @@
+setuptools>=61.0.0
 pypinyin
 PersianG2p
 deep_translator
