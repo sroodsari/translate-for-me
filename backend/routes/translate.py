@@ -1,16 +1,11 @@
 from pypinyin import lazy_pinyin, Style
-import epitran
 from PersianG2p import Persian_g2p_converter
-from deep_translator import GoogleTranslator, MyMemoryTranslator
-
+from deep_translator import MyMemoryTranslator
 
 from fastapi import APIRouter
-from googletrans import Translator
 from models.request import TranslateRequest
 
 router = APIRouter()
-translator = Translator()
-epi_fa = epitran.Epitran('fas-Arab')
 PersianG2Pconverter = Persian_g2p_converter()
 
 
