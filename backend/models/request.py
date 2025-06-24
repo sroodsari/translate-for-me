@@ -3,5 +3,5 @@ from typing import List
 
 class TranslateRequest(BaseModel):
     lines: List[str]
-    from_lang: str = "zh-cn"
-    to_lang: str = "en"
+    from_lang: str = "zh-CN"
+    to_lang: str = "en-US"
