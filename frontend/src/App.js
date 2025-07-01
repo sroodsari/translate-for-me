@@ -38,7 +38,17 @@ function App() {
       </header>
       <hr className="hr" />
       <div className="App-container">
-        <h1>{language === 'zh-CN' ? 'Chinese to English' : 'Farsi to English'} Translator</h1>
+        <div className="container-header">
+          <h1>{language === 'zh-CN' ? 'Chinese to English' : 'Farsi to English'} Translator</h1>
+          <label>
+            Language:
+            <select value={language} onChange={(e) => setLanguage(e.target.value)}>
+              <option value="zh-CN">Chinese</option>
+              <option value="fa-IR">Farsi</option>
+            </select>
+          </label>
+        </div>
+
         <div className="column-container">
           <div className="column-left">
             <textarea
@@ -49,13 +59,7 @@ function App() {
               onChange={(e) => setText(e.target.value)}
             />
             <div className='userSelection'>
-              <label>
-                Language:
-                <select value={language} onChange={(e) => setLanguage(e.target.value)}>
-                  <option value="zh-CN">Chinese</option>
-                  <option value="fa-IR">Farsi</option>
-                </select>
-              </label>
+
 
               <button onClick={translateText}>Translate</button>
             </div>

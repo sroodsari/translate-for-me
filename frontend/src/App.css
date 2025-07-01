@@ -43,6 +43,13 @@ h2 {
   position: relative;
 }
 
+.container-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
 .column-container {
   display: flex;
   flex-direction: row;
@@ -51,22 +58,23 @@ h2 {
 
 }
 
-.column-left,
-.column-right {
+.column-left {
+  flex: 1;
+  margin-right: 3rem;
+}
 
+.column-right {
   flex: 1;
   /* Allows columns to grow equally */
   margin-left: 3rem;
-  margin-right: 3rem;
   /* space between columns */
 }
 
 h1 {
   color: var(--accent-brown);
-  font-size: 2.5rem;
-  text-align: center;
-  margin-bottom: 2rem;
+  font-size: 2rem;
   font-weight: normal;
+  margin: 0;
 }
 
 select {
@@ -95,7 +103,7 @@ textarea {
   border-radius: 20px;
   font-size: 1.1rem;
   resize: none;
-  min-height: 150px;
+  min-height: 200px;
   transition: all 0.3s ease;
   font-family: inherit;
   background-color: #FFFFFF;
@@ -141,7 +149,7 @@ button:active {
   border-radius: 20px;
   font-size: 1.1rem;
   resize: vertical;
-  min-height: 150px;
+  min-height: 200px;
   background-color: #FFFFFF;
   border-style: solid;
   border-width: 3px;
