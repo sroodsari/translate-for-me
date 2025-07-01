@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 :root {
   --primary-pink: #FFE5E5;
   --secondary-pink: #FFD1D1;
@@ -7,26 +9,64 @@
 
 body {
   background-color: var(--primary-pink);
-  font-family: 'Courier Prime', 'Courier New', 'Courier', monospace;
+  font-family: "Roboto", sans-serif, thin;
 }
 
-.App {
-  max-width: 1000px;
+
+.App-header {
+  padding: .5rem;
+  color: rgb(100, 51, 56);
+  padding-left: 2rem;
+  background-color: #FFD1D1;
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+  font-family: "Roboto", sans-serif, thin;
+  font-weight: 300;
+}
+
+.hr {
+  border-color: rgb(100, 51, 56);
+  height: 1px;
+  border: 0;
+  margin: 0;
+}
+
+
+.App-container {
+  width: 80%;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: var(--cloud-white);
   border-radius: 5px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   position: relative;
 }
 
+.column-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1rem;
+
+}
+
+.column-left,
+.column-right {
+
+  flex: 1;
+  /* Allows columns to grow equally */
+  margin-left: 3rem;
+  margin-right: 3rem;
+  /* space between columns */
+}
 
 h1 {
   color: var(--accent-brown);
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 2rem;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 select {
@@ -47,13 +87,14 @@ select:hover {
 }
 
 textarea {
-  width: 95%;
+  width: 100%;
+  /* Ensure textarea takes full width of its column */
   padding: 1.5rem;
   margin: 1.5rem 0;
   border: 3px solid var(--secondary-pink);
   border-radius: 20px;
   font-size: 1.1rem;
-  resize: vertical;
+  resize: none;
   min-height: 150px;
   transition: all 0.3s ease;
   font-family: inherit;
@@ -76,7 +117,7 @@ button {
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: inherit;
-  font-weight: bold;
+  font-weight: normal;
   display: block;
   margin: 1rem auto;
   position: relative;
@@ -92,13 +133,19 @@ button:active {
 }
 
 .translation-container {
-  margin-top: 0.5rem;
-  padding: 1rem;
-  background-color: #FFFFFF;
+  width: 100%;
+  /* Ensure translation container takes full width of its column */
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border: 3px solid var(--secondary-pink);
   border-radius: 20px;
-  border-color: var(--secondary-pink);
+  font-size: 1.1rem;
+  resize: vertical;
+  min-height: 150px;
+  background-color: #FFFFFF;
   border-style: solid;
   border-width: 3px;
+  ;
 }
 
 .translation-item {
@@ -114,7 +161,10 @@ button:active {
 .userSelection {
   display: flex;
   justify-content: space-between;
-
+  flex-wrap: wrap;
+  /* if on smaller screens */
+  max-width: 100%;
+  /* or set specific width */
 }
 
 .original-text {

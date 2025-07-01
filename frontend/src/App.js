@@ -33,40 +33,50 @@ function App() {
 
   return (
     <div className="App">
-      <h1>{language === 'zh-CN' ? 'Chinese to English' : 'Farsi to English'} Translator</h1>
+      <header className="App-header">
+        <h2>translate for me</h2>
+      </header>
+      <hr className="hr" />
+      <div className="App-container">
+        <h1>{language === 'zh-CN' ? 'Chinese to English' : 'Farsi to English'} Translator</h1>
+        <div className="column-container">
+          <div className="column-left">
+            <textarea
+              rows="10"
+              cols="100"
+              placeholder={language === 'zh-CN' ? "Enter Chinese text" : "Enter Farsi text"}
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+            />
+            <div className='userSelection'>
+              <label>
+                Language:
+                <select value={language} onChange={(e) => setLanguage(e.target.value)}>
+                  <option value="zh-CN">Chinese</option>
+                  <option value="fa-IR">Farsi</option>
+                </select>
+              </label>
 
-      <textarea
-        rows="5"
-        cols="50"
-        placeholder={language === 'zh-CN' ? "Enter Chinese text" : "Enter Farsi text"}
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-      />
-      <div className='userSelection'>
+              <button onClick={translateText}>Translate</button>
+            </div>
 
-
-        <label>
-          Language:
-          <select value={language} onChange={(e) => setLanguage(e.target.value)}>
-            <option value="zh-CN">Chinese</option>
-            <option value="fa-IR">Farsi</option>
-          </select>
-        </label>
-
-        <button onClick={translateText}>Translate</button>
-      </div>
-
-
-      <div className="translation-container">
-        {text.split('\n').map((line, index) => (
-          <div key={index} className="translation-item">
-            <p className="original-text">{line}</p>
-            <p className="transliterated-text">{transliteratedLines[index]}</p>
-            <p className="translated-text">{translatedLines[index]}</p>
           </div>
-        ))}
+          <br />
+          <div className="column-right">
+            <div className="translation-container">
+              {text.split('\n').map((line, index) => (
+                <div key={index} className="translation-item">
+                  <p className="original-text">{line}</p>
+                  <p className="transliterated-text">{transliteratedLines[index]}</p>
+                  <p className="translated-text">{translatedLines[index]}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+
+    </div >
   );
 }
 
