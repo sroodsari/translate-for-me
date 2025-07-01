@@ -103,7 +103,7 @@ textarea {
   border-radius: 20px;
   font-size: 1.1rem;
   resize: none;
-  min-height: 200px;
+  min-height: 210px;
   transition: all 0.3s ease;
   font-family: inherit;
   background-color: #FFFFFF;
@@ -149,7 +149,7 @@ button:active {
   border-radius: 20px;
   font-size: 1.1rem;
   resize: vertical;
-  min-height: 200px;
+  min-height: 210px;
   background-color: #FFFFFF;
   border-style: solid;
   border-width: 3px;
