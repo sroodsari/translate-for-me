@@ -70,11 +70,11 @@ h1 {
 }
 
 select {
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.7rem;
   border: 3px solid var(--secondary-pink);
-  border-radius: 20px;
-  margin-left: 1rem;
+  border-radius: 13px;
+  margin-left: 0.5rem;
   background-color: var(--cloud-white);
   cursor: pointer;
   transition: all 0.3s ease;
@@ -111,21 +111,21 @@ button {
   background-color: var(--secondary-pink);
   color: var(--accent-brown);
   border: none;
-  padding: 1rem 2.5rem;
-  font-size: 1.2rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 0.9rem;
   border-radius: 25px;
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: inherit;
-  font-weight: normal;
+  font-weight: bold;
   display: block;
-  margin: 1rem auto;
+  margin: 0.5rem;
   position: relative;
 }
 
 button:hover {
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 button:active {
@@ -186,10 +186,10 @@ button:active {
 /* Cute label styling */
 label {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem;
   background-color: var(--secondary-pink);
-  border-radius: 15px;
+  border-radius: 10px;
   color: var(--accent-brown);
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
