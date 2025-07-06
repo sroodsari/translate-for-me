@@ -50,6 +50,8 @@ h2 {
   overflow: hidden;
 }
 
+
+
 .column-container {
   display: flex;
   flex-direction: row;
@@ -69,6 +71,32 @@ h2 {
   margin-left: 3rem;
   /* space between columns */
 }
+
+@media (max-width: 768px) {
+  .column-container {
+    flex-direction: column;
+    /* Change to a column layout */
+  }
+
+  .column-left {
+    flex: 1;
+    margin: 1rem;
+  }
+
+  .column-right {
+    flex: 1;
+    /* Allows columns to grow equally */
+    margin: 1rem;
+    /* space between columns */
+  }
+
+  .container-header {
+    flex-direction: column;
+  }
+
+
+}
+
 
 h1 {
   color: var(--accent-brown);
